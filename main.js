@@ -1,5 +1,5 @@
-import { NoteManager } from './src/js/noteManager.js';
-import { createNoteElement } from './src/js/noteElement.js';
+import { NoteManager } from './noteManager.js';
+import { createNoteElement } from './noteElement.js';
 
 const noteManager = new NoteManager();
 const notesContainer = document.getElementById('notesContainer');
