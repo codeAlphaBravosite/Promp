@@ -1,5 +1,5 @@
-import { formatDate } from './utils/dateUtils.js';
-import { copyToClipboard } from './utils/clipboardUtils.js';
+import { formatDate } from './dateUtils.js';
+import { copyToClipboard } from './clipboardUtils.js';
 
 export function createNoteElement(note, noteManager, onNoteUpdate) {
     const noteDiv = document.createElement('div');
