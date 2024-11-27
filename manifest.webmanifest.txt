@@ -1,12 +1,12 @@
 {
-  "name": "Script Writer",
-  "short_name": "Script Writer",
-  "description": "A powerful writing app",
+  "name": "library",
+  "short_name": "library",
+  "description": "A powerful library app",
   "start_url": "./index.html",
   "scope": ".",
   "display": "standalone",
-  "background_color": "#0f172a",
-  "theme_color": "#0f172a",
+  "background_color": "#ffffff",
+  "theme_color": "#ffffff",
   "orientation": "natural",
   "categories": ["productivity", "utilities"],
   "icons": [
