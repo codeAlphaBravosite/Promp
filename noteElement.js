@@ -98,7 +98,7 @@ function handleLockToggle(note, noteManager, titleInput, textarea, btn) {
 async function handleDelete(note, noteManager, noteDiv) {
     const confirmed = await dialog.confirm({
         title: 'Delete Note',
-        message: 'Are you sure',
+        message: 'Are you sure?',
         confirmText: 'Delete',
         cancelText: 'Cancel'
     });
