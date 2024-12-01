@@ -1,10 +1,10 @@
 export function copyToClipboard(text) {
   navigator.clipboard.writeText(text)
     .then(() => {
-      showToast('Copied to clipboard!');
+      showToast('Copied');
     })
     .catch(err => {
-      showToast('Failed to copy text');
+      showToast('Failed to copy');
     });
 }
 
