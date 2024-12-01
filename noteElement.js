@@ -1,5 +1,7 @@
 import { formatDate } from './dateUtils.js';
 import { copyToClipboard } from './clipboardUtils.js';
+import { DialogManager } from './dialog.js';
+const dialog = new DialogManager();
 
 export function createNoteElement(note, noteManager, onNoteUpdate) {
     const noteDiv = document.createElement('div');
@@ -93,8 +95,15 @@ function handleLockToggle(note, noteManager, titleInput, textarea, btn) {
         textarea.readOnly ? 'lock' : 'lock_open';
 }
 
-function handleDelete(note, noteManager, noteDiv) {
-    if (confirm('Are you sure you want to delete this note?')) {
+async function handleDelete(note, noteManager, noteDiv) {
+    const confirmed = await dialog.confirm({
+        title: 'Delete Note',
+        message: 'Are you sure',
+        confirmText: 'Delete',
+        cancelText: 'Cancel'
+    });
+
+    if (confirmed) {
         noteManager.deleteNote(note.id);
         noteDiv.remove();
     }
