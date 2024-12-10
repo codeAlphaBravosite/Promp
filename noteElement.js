@@ -36,7 +36,7 @@ export function createNoteElement(note, noteManager, onNoteUpdate) {
         >
         <textarea
             class="note-content ${note.isLocked ? 'locked' : ''}"
-            placeholder="Write your note here..."
+            placeholder="Write your note here..." spellcheck="false" 
             ${note.isLocked ? 'readonly' : ''}
         >${note.content || ''}</textarea>
     `;
